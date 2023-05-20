@@ -5,7 +5,7 @@ from posts.models import Post
 def get_index(request):
     posts = Post.objects.all()
     context = {
-        "title": "Главная страница Жаныша",
+        "title": "Главная страница ",
         "posts": posts
     }
     return render(request, "posts/index.html", context = context)
@@ -28,7 +28,7 @@ def get_about(request):
     
 def update_post(request):
     context = {
-        "h1": "Да работает"
+        "h1": "работает"
     }
     return render(request, "posts/update_post.html", context = context)
 

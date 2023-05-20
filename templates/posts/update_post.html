@@ -1,23 +1,12 @@
 {% extends 'base.html' %}
+{% block title %}
+Обновить запись
+{% endblock %}
+{% block content %}
+    <form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
 
-{% block content%}
-
-    <h1>{{ h1 }}</h1>
-    
-<button type="button" class="btn btn-secondary btn-lg">
-    <a href="{% url 'view-get_index' %}" style="text-decoration: none; color: black;">Главная</a>
-</button>
-
-<button type="button" class="btn btn-secondary btn-lg">
-    <a href="{% url 'view-get_contacts' %}" style="text-decoration: none; color: black;">Контакты</a>
-</button>
-
-<button type="button" class="btn btn-dark btn-lg">
-    <a href="{% url 'view-get_about' %}" style="text-decoration: none; color: white;">О нас</a>
-</button>
-
-<button type="button" class="btn btn-dark btn-lg">
-    <a href="{% url 'post-create' %}" style="text-decoration: none; color: white;">create-post</a>
-</button>
-
+    <button type="submit">Обновить запись</button>
+    </form>
 {% endblock %}
