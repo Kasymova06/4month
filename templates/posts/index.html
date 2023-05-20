@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+<h1>Я Жаныш, ментор 1 месяца</h1>
+
+    {% for post in posts %}
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">{{ post.get_category_display }} - {{ post.created }}</h6>
+            <p class="card-text">{{ post.content|truncatewords:8}}</p>
+            <a href="{% url 'post-detail' post.id  %}" class="card-link">Читать далее -></a>
+            </div>
+        </div>
+    <br>
+    {% endfor %}
+
+<button type="button" class="btn btn-secondary btn-lg mt-2">
+    <a href="{% url 'view-get_about' %}" style="text-decoration: none; color: black;">О нас</a>
+</button>
+
+<button type="button" class="btn btn-dark btn-lg mt-2">
+    <a href="{% url 'view-get_contacts' %}" style="text-decoration: none; color: white;">Контакты</a>
+</button>
+
+<button type="button" class="btn btn-secondary btn-lg mt-2">
+    <a href="{% url 'post-create' %}" style="text-decoration: none; color: black;">create_post</a>
+</button>
+
+<button type="button" class="btn btn-dark btn-lg mt-2">
+    <a href="{% url 'post-update' %}" style="text-decoration: none; color: white;">update_post</a>
+</button>
+
+{% endblock %}

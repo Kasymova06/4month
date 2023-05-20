@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+<h1>Это страница о нас</h1>
+
+<button type="button" class="btn btn-secondary btn-lg">
+    <a href="{% url 'view-get_index' %}" style="text-decoration: none; color: black;">Главная</a>
+</button>
+
+<button type="button" class="btn btn-dark btn-lg">
+    <a href="{% url 'view-get_contacts' %}" style="text-decoration: none; color: white;">Контакты</a>
+</button>
+
+<button type="button" class="btn btn-secondary btn-lg">
+    <a href="{% url 'post-create' %}" style="text-decoration: none; color: black;">create_post</a>
+</button>
+
+<button type="button" class="btn btn-dark btn-lg">
+    <a href="{% url 'post-update' %}" style="text-decoration: none; color: white;">update_post`</a>
+</button>
+
+{% endblock %}
