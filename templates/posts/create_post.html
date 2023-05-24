@@ -3,10 +3,15 @@
 Создать запись
 {% endblock %}
 {% block content %}
+
     <form action="" method="post">
     {% csrf_token %}
-    {{ form.as_p }}
 
-    <button type="submit">Создать запись</button>
+        {{ form.as_p}}
+
+        <button type="submit">Создать запись</button>
+
     </form>
+
+    <a href="{% url 'index-page' %}">На главную</a>
 {% endblock %}
