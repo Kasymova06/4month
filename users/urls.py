@@ -1,5 +1,6 @@
 from django.urls import path
 
-urlspatterns =[
+urlspatterns =[ 
+    path("users/register")
 
 ]
